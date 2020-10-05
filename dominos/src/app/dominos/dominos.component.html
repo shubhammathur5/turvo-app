@@ -1,0 +1,106 @@
+<!-- <p>dominos works!</p> -->
+<div id="container" class="wrapper">
+    <div id="domino-header" class="">
+        <div class="header" id="top-header">
+            <div class="hamburger" onclick="openDrawer()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="" class="logo-image">
+                <img src="../../assets/images/Logo.png">
+            </a>
+            <ul class="upper-footer-links">
+                <li><a href="/menu">OUR MENU</a></li>
+                <!--<li><a href="/great-deals/online-pizza-coupons">OFFERS</a></li>-->
+                <li><a href="/store-location">STORE FINDER</a></li>
+                <li class="link-desktop"><a href="/about-us">INSIDE DOMINO'S</a></li>
+                <li class="link-desktop"><a href="/gift-vouchers">GIFT CARD</a></li>
+                <li class="link-desktop"><a href="/contact">CONTACT</a></li>
+            </ul>
+            <a class="dnld-app-header" href="https://dominos.onelink.me/uM7R/3e839899">
+                Download App
+            </a>
+        </div>
+    </div>
+</div>
+
+<div #labelRef class="diceRoller">
+    <!-- <div class="slider">
+        <app-slider></app-slider>
+    </div> -->
+    <!-- speed control -->
+    <div class="sliderclass">
+        <div>
+
+            <span title="control the speed">Speed: </span><b class="speedValue">{{speed.value}}</b>
+            <div title="Control your dice speed" class=" info material-icons">
+                info
+            </div>
+        </div>
+        <mat-slider #speed (change)="updatespeedSetting($event)" step="5" min="10" max="100" [value]="speed">
+        </mat-slider>
+
+        <!-- size control -->
+        <div>
+            <span>Size: </span><b class="gridSizeValue">{{gridsize.value}}</b>
+            <div title="Control your dice size" class=" info material-icons">
+                info
+            </div>
+        </div>
+        <mat-slider #gridsize (change)="updateSetting($event)" step="5" min="10" max="100" [value]="gridsize">
+        </mat-slider>
+    </div>
+    <div class="button col-md-2">
+        <button type="button" (click)="rollDice()" id="roll-button">Roll Dice</button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- <div class="button">
+                <button type="button" (click)="rollDice()" id="roll-button">Roll Dice</button>
+                </div> -->
+        </div>
+        <div class="col-md-4">
+            <ol class="die-list even-roll" data-roll="1" id="die-1">
+                <li class="die-item" data-side="1">
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="2">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="3">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="4">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="5">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="6">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+            </ol>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+
+</div>

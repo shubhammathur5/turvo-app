@@ -1,0 +1,16 @@
+mat-slider {
+    width: 300px;
+  }
+  ::ng-deep .mat-slider-thumb{
+      background-color: #095c91;
+  }
+  ::ng-deep .mat-slider-ticks-container{
+    background: #fefefe;
+  }
+  span{
+      color: #fefefe;
+  }
+  b{
+    color: #fefefe;
+ 
+  }

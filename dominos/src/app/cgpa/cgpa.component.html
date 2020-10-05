@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="Average:{{average}}">
+            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+
+                <div class="cgpadata" formArrayName="quantities">
+                    <div class="addgpa">
+                        <button type="button" (click)="addQuantity()" class="btn btn-primary">Add Student</button>
+                    </div>
+                    <div *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+                        <div class="name">
+                            Name:
+                            <input type="text" formControlName="qty" class="form-control">
+                            GPA:
+                            <input type="number" formControlName="price" class="form-control">
+                            <button (click)="removeQuantity(i)" class="btn btn-danger">Remove Student</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Submit</button>
+
+            </form>
+        </mat-tab>
+        <mat-tab label="Second">Content 2</mat-tab>
+        <mat-tab label="Third">Content 3</mat-tab>
+        <mat-tab label="Fourth">Content 4</mat-tab>
+
+    </mat-tab-group>
+</div>
